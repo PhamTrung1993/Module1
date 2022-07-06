@@ -51,6 +51,9 @@ Thiếu tham số này thì action bằng URL đang truy cập.-->
         <label><input type="radio" name="hobby" value="sport">Thể thao</label><br>
         <label><input type="radio" name="hobby" value="cooking">Nấu ăn</label><br><br>
         <input type="submit" value="send data" ><br><br>
+
+<!--        input hidden dùng để chứa giá trị của form nhưng không hiển thị trên giao diện người dùng.-->
+<!--        Dữ liệu này cũng được đẩy lên sever như bình thường-->
         <input type="hidden" name="secret" value="ầgasahhrhth">
         Account : <input type="text" name="account" value="admin"></br>
         Sở thích: <br>
@@ -59,6 +62,20 @@ Thiếu tham số này thì action bằng URL đang truy cập.-->
         <label><input type="radio" name="hobby" value="cooking">Nấu ăn</label><br>
         <input type="submit" value="send data"><br>
         <br>
+        <button type="button">
+            <img src="pngtree-arc-arrow-vector-diagram-3511887-png-image_1733870.jpg" height="100" width="100"/>
+            </button>
+    </form>
+<br><br>
+    <form method="POST">
+        <button name="button" value="ok" type="button" onclick="Hello()">
+            <img src="pngtree-arc-arrow-vector-diagram-3511887-png-image_1733870.jpg" height="100" width="100"/>
+        </button>
+        <script>
+            function Hello(){
+                alert("Hello html button")
+            }
+        </script>
     </form>
 </body>
 </html>
