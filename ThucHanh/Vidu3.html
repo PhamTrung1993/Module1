@@ -6,5 +6,59 @@
 </head>
 <body>
 
+<!--action thuộc tính để thiết lập URL, là địa chỉ mà dữ liệu của form gửi đến (submit đến, post đến).
+Thiếu tham số này thì action bằng URL đang truy cập.-->
+
+    <form action="/action_page.php">
+<!--    text dùng để nhập dữ liệu ngắn-->
+    Account  :
+        <input type="text" name="account "/><br><br>
+
+<!--    input password dùng để nhập password-->
+    Password :
+        <input type="password" name="password"/><br><br>
+    Sở thích: <br>
+<!--    input checkout dùng để lựa chọn nhiều hạng mục từ một danh sách-->
+        <label><input type="checkbox" name="hobby" value="tralve">Du lịch</label><br>
+        <label><input type="checkbox" name="hobby" value="sport"> Thể thao</label><br>
+        <label><input type="checkbox" name="hobby"  value="cooking">Nấu ăn</label><br>
+        <br>
+        Sở thích: <br>
+<!--    input radio dùng để lựa chọn ột hạng mục từ danh sách-->
+        <label><input type="radio" name="hobby" value="Tralve" checked/>Du lịch</label><br>
+        <label><input type="radio" name="hobby" value="Sport">Thể thao</label><br>
+        <label><input type="radio" name="hobby" value="cooking">Nấu ăn</label><br>
+        <br>
+
+        Account: <input type="text" name="account" value="admin"> <br>
+        Sở thích: <br>
+<!--    Input reset dùng để xóa các giá trị trong một form, đưa các trường về giá trị mặc định của chúng.-->
+        <label><input type="radio" name="hobby" value="travel" checked>Du lịch</label><br>
+        <label><input type="radio" name="hobby" value="sport">Thể thao </label><br>
+        <label><input type="radio" name="hobby" value="cooking">Nấu ăn</label><br><br>
+        <input type="reset" value="reset">
+        <br>
+    </form>
+<!--method thuộc tính để thiết lập HTTP Method-->
+<!--Sử dụng method="get" thì khi submit dữ liệu được biểu diễn thông qua URL. -->
+<!--Sử dụng method="post" thì khi submit biểu diễn trong nội dung của Request gửi đến Server và là ẩn với người dùng, -->
+<!--sử dụng post an toàn hơn.-->
+    <form method="Post">
+<!--        inpput submit dùng để hiển thị một nút,có chức năng đẩy dữ liệu từ form lên server khi bấm vào-->
+        Account: <input type="text" name="account"><br>
+        Sở thích: </br>
+        <label><input type="radio" name="hobby" value="travel" checked>Du Lịch</label><br>
+        <label><input type="radio" name="hobby" value="sport">Thể thao</label><br>
+        <label><input type="radio" name="hobby" value="cooking">Nấu ăn</label><br><br>
+        <input type="submit" value="send data" ><br><br>
+        <input type="hidden" name="secret" value="ầgasahhrhth">
+        Account : <input type="text" name="account" value="admin"></br>
+        Sở thích: <br>
+        <label><input type="radio" name="hobby" value="travel" checked>Du lịch </label><br>
+        <label><input type="radio" name="hobby" value="sport">Thể thao</label><br>
+        <label><input type="radio" name="hobby" value="cooking">Nấu ăn</label><br>
+        <input type="submit" value="send data"><br>
+        <br>
+    </form>
 </body>
 </html>
