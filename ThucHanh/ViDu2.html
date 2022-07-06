@@ -5,6 +5,30 @@
     <title>Title</title>
 </head>
 <body>
-
+  <form>
+    First Name: <br>
+    <input type="text" name="first name" value="Mickey">
+    <br>
+    Last name: <br>
+    <input type="text" name="last name" value="Mouse">
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <br><br>
+<!--  thuộc tính action quy định nơi dữ liệu được gửi đến-->
+  <form action="https://www.google.com/">
+    <input type="text" name="q"/>
+    <input type="submit" value="Tìm kiếm">
+  </form>
+  <br><br>
+  <form action="/action_page.php">
+    <fieldset>
+      <legend>Personal information:</legend>
+      First name: <br>
+      <input type="text" name="first name" value="Mickey"><br>
+      <input type="text" name="last name" value="Mouse"><br><br>
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
 </body>
 </html>
