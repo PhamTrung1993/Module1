@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+    border : 10px solid aquamarine;
+    width: 500px;
+    height: 300px;
+
+}
+th {
+    background-color: orangered;
+    color: white;
+}
+td:nth-child(odd){
+
+    color: blue;
+
+}
+label{
+    color: red;
+    vertical-align: top;
+}
+td{
+    vertical-align: top;
+
+}
+

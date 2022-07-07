@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
   <form>
+    <label>
     First Name: <br>
     <input type="text" name="first name" value="Mickey">
+    </label>
     <br>
-    Last name: <br>
-    <input type="text" name="last name" value="Mouse">
+    <label for=" Last name: ">Last name</label><br>
+    <input id=" Last name: " type="text" name="last name" value="Mouse">
     <br><br>
     <input type="submit" value="Submit">
   </form>
@@ -23,8 +25,8 @@
   <br><br>
   <form action="/action_page.php">
     <fieldset>
-      <legend>Personal information:</legend>
-      First name: <br>
+
+      <h4> First name: </h4><br>
       <input type="text" name="first name" value="Mickey"><br>
       <input type="text" name="last name" value="Mouse"><br><br>
       <input type="submit" value="Submit">
