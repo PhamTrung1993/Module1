@@ -6,14 +6,19 @@
 </head>
 <body>
 <form action="http://demo.codegym.vn/6/registration_form/register.php" method="post">
-<fieldset style="width: 75%">
-    <h3>ĐĂNG KÝ HỌC VIÊN</h3><br>
-    Họ và tên:
-        <input type="text" name="yourname"><br><br>
-    Ngày sinh:
-        <input type="date" name="date"><br><br>
-
-    Giới tính:
+<table>
+    <tr>
+    <th>ĐĂNG KÝ HỌC VIÊN</th>
+        <tr>
+           <td>Họ và tên: </td>
+            <td><input type="text" name="yourname"><br><br></td>
+        </tr>
+        <tr>
+            <td>Ngày sinh:</td>
+            <td><input type="date" name="date"><br><br></td>
+        </tr>
+    <tr></tr>
+        <td></td>Giới tính:
         <label><input type="radio" name="gender">Nam</label>
 
         <label><input type="radio" name="gender">Nữ</label><br><br>
@@ -28,7 +33,7 @@
 
 
     </select>
-</fieldset>
+</table>
 </form>
 </body>
 </html>
