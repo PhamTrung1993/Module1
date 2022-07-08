@@ -1,0 +1,22 @@
+table {
+
+    width: 500px;
+    height: 300px;
+    background-color: #fcdd89;
+}
+
+
+th{
+    color: blue;
+    background-color: aquamarine;
+    text-align: left;
+}
+td:nth-child(odd){
+    width:15px;
+    color: blue;
+    text-align: left;
+    vertical-align: top;
+}
+td:nth-child(even){
+
+}

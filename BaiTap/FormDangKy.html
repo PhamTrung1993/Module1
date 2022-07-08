@@ -3,34 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="FormDangKy.css">
 </head>
 <body>
 <form action="http://demo.codegym.vn/6/registration_form/register.php" method="post">
 <table>
     <tr>
-    <th>ĐĂNG KÝ HỌC VIÊN</th>
-        <tr>
+        <th colspan="2">ĐĂNG KÝ HỌC VIÊN</th>
+    <tr>
            <td>Họ và tên: </td>
             <td><input type="text" name="yourname"><br><br></td>
-        </tr>
-        <tr>
+    </tr>
+    <tr>
             <td>Ngày sinh:</td>
             <td><input type="date" name="date"><br><br></td>
-        </tr>
-    <tr></tr>
-        <td></td>Giới tính:
+    </tr>
+    <tr>
+        <td>Giới tính:</td>
+        <td>
         <label><input type="radio" name="gender">Nam</label>
-
-        <label><input type="radio" name="gender">Nữ</label><br><br>
-    Địa chỉ:
-        <input  type="text" name="address"><br><br>
-    Lớp:
-    <select name="Class">
-        <option value="False">-- Chọn Lớp --</option>
-        <option value="Java">Lớp Java</option>
-        <option value="JavaCript">Lớp JavaCript</option>
-        <option value="PHP">Lớp PHP</option>
-
+        <label><input type="radio" name="gender">Nữ</label>
+        </td>
+    </tr>
+    <tr style="height: 50px">
+        <td>Địa chỉ:</td>
+        <td>
+        <input  type="text" name="address" style="height: 50px">
+        </td>
+    </tr>
+    <tr>
+    <td>Lớp:</td>
+        <td>
+        <select name="Class">
+            <option value="False">-- Chọn Lớp --</option>
+            <option value="Java">Lớp Java</option>
+            <option value="JavaCript">Lớp JavaCript</option>
+            <option value="PHP">Lớp PHP</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td><input type="text" name="Email"></td>
+    </tr>
+    <tr>
+        <td rowspan="2">Điện thoại:</td>
+        <td><input type="number" name="Phone"></td>
+    </tr>
+    <tr>
+        <td><input type="submit" name="Submit" value="Đăng Ký">
+        <input type="reset" name="reset" value="Nhập lại"></td>
+    </tr>
 
     </select>
 </table>
