@@ -1,0 +1,27 @@
+table {
+    border: 10px solid orange;
+   border-collapse: collapse;
+    width:500px;
+    height:500px;
+    font-family: Arial;
+    font-size: large;
+    table-layout: fixed;
+    margin-left: 35%
+
+}
+
+
+
+
+.c1,th{
+    background-color: orange;
+}
+.c1{
+    text-align: right;
+}
+
+.d{
+    background-color: black;
+}
+
+
