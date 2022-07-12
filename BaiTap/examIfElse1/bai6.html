@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--15% cho hóa đơn từ 3000000-->
+<!--10% cho hóa đơn từ 1500000-->
+<!--5% cho hóa đơn dưới 1500000-->
+<body>
+    <input type="text" id="doanhso">Doanh Số kiếm được <br><br>
+    <button onclick="hoaHong()">Tính Hoa Hồng </button><br> <br>
+    <p> Số tiền hoa hồng là</p>
+    <div id="money"> VND</div>
+</body>
+</html>
+<script>
+    function hoaHong() {
+        let h = parseFloat(document.getElementById("doanhso").value );
+
+         if ( h > 3000000) {
+             let m = (h - 3000000)*0.15 + (3000000-1500000) * 0.1 + 1500000*0.05;
+             document.getElementById("money").innerHTML= 'Số tiền hoa hồng là: ' + m + 'VND';
+            }
+         else if ( h > 1500000) {
+             let m = (h - 1500000) * 0.1 + 1500000*0.05;
+             document.getElementById("money").innerHTML= ' Số tiền hoa hồng là: '+ m +'VND';
+
+         }
+         else {
+             let m = h * 0.05;
+             document.getElementById("money").innerHTML=' Số tiền hoa hồng là: ' + m +'VND';
+         }
+
+    }
+</script>

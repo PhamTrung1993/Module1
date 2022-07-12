@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <input type="text" id="diemkiemtra">Điểm Kiểm Tra <br>
+  <input type="text" id="diemgiuaky">Điểm Giữa Kỳ <br>
+  <input type="text" id="diemcuoiky"> Điểm Cuối Kỳ <br><br>
+  <button onclick="xephang()">Xếp Hạng</button>
+</body>
+</html>
+<script>
+  function xephang() {
+    let a = +(document.getElementById("diemkiemtra").value);
+    let b = +(document.getElementById("diemgiuaky").value);
+    let c = +(document.getElementById("diemcuoiky").value);
+    let d = (a+b+c)/3;
+    if (d < 10) {
+      if (d >= 8) {
+        alert('Học sinh giỏi');
+      } else if (d >= 6.5) {
+        alert('Học sinh khá');
+      } else if (d >= 5) {
+        alert('Học sinh trung bình');
+      } else if (d >= 3.5) {
+        alert('Học sinh yếu');
+      } else {
+        alert('Học sinh kém');
+      }
+    }
+    else { alert('bạn đã nhập sai dữ liệu')}
+    }
+
+</script>

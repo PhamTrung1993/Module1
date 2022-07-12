@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <label><input type="text" id="so1">Nhập số thứ nhất</input></label><br>
+  <label><input type="text" id="so2">Nhập số thứ hai</input></label><br>
+  <label><input type="text" id="so3">Nhập số thứ ba</input></label><br><br>
+  <button onclick="max()">Tìm số lớn nhất</button>
+<p>kết quả là:</p>
+<div id="kQ"> </div>
+</body>
+</html>
+<script>
+  function max() {
+    let a = parseInt(document.getElementById("so1").value);
+    let b = parseInt(document.getElementById("so2").value);
+    let c = parseInt(document.getElementById("so3").value);
+
+    if (a >= b && a >= c) {
+      document.getElementById("kQ").innerHTML = a + ' là số lớn nhất';
+    }
+    else if (b > c) {
+      document.getElementById("kQ").innerHTML = b + ' là số lớn nhất';
+    }
+    else  document.getElementById("kQ").innerHTML = c + ' là số lớn nhất'
+  }
+</script>

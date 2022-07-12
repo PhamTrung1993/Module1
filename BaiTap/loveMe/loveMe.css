@@ -1,0 +1,21 @@
+#no {
+    position: absolute;
+    height: 40px;
+    width: 100px;
+    color: red;
+}
+#nen {
+    background-image: url("cuteCat.jpg");
+    text-align: center;
+}
+h1 {
+    color: hotpink;
+}
+button {
+    border-radius: 5px;
+}
+#yes {
+    width: 150px;
+    height: 50px;
+    color: deeppink;
+}

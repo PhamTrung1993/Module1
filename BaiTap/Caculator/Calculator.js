@@ -12,7 +12,8 @@ function display(value) {
 // Đánh giá kết quả và trả lại
 function calculate() {
     var p = document.getElementById("result").value;
-
+// phương thức eval() có chức năng tính toán biểu thức toán học
+// hoặc thực thi mã lệnh tùy thuộc vào tham số mà người dùng truyền vào
     var q = eval(p);
     document.getElementById("result").value = q;
 }
