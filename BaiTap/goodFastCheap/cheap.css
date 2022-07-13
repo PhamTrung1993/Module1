@@ -1,0 +1,70 @@
+.sw {
+    /*position : relative Định vị vị trí tuyệt đối cho các thành phần.*/
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    margin: 10px;
+}
+.sw input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+}
+.slide {
+
+    /*position: absolute có tác dụng giúp định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài,*/
+    /*hoặc ít nhất là theo cửa sổ trình duyệt.*/
+    /*!*Cụ thể hơn, thuộc tính absolute xác định định tọa độ của thành phần theo một thẻ cha relative (nếu có),*!*/
+    position: absolute;
+    /*Thuộc tính cursor hiển thị con trỏ chuột khi duy chuyển con trỏ vào thành phần*/
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cccccc;
+    /*Thuộc tính transition xác định một quá trình chuyển đổi khi có một hành động*/
+    -webkit-transition: .4s;
+    transition: 0.4s;
+}
+.slide:before{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked +.Good {
+    background-color: red;
+
+}
+input:checked+.Cheap {
+    background-color: blue;
+
+}
+input:checked+.Fast {
+    background-color: yellow;
+}
+input:checked+.slide:before {
+    /*Thuộc tính transform xác định một chuyển đổi 2 chiều, 3 chiều, có thể là xoay, tỷ lệ, di chuyển, nghiêng, ...*/
+    /*translateX : Xác định một dịch chuyển 2D theo trục X.*/
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.slide.roun {
+    border-radius: 30px;
+
+}
+.slide.roun:before {
+    border-radius: 50%;
+}
+b {
+    font-size: larger;
+}
