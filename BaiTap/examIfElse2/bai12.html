@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--A = P x (1 + r)^n-->
+<body>
+    Nhập số tiền thu nhập tính thuế :
+        <input type="number" id="lai"> <br>
+    Nhập số tháng:
+        <input type="number" id="month"><br>
+    Lãi suất hàng tháng :
+        <input type="number" id="su"><br>
+            <button onclick="la()"> Tính Tiền Lãi</button>
+    <p> Số tiền lãi là:</p>
+    <div id="inte"></div>
+
+</body>
+</html>
+<script>
+    function la() {
+        let P = +(document.getElementById("lai").value);
+        let n = +(document.getElementById("month").value);
+        let r = +(document.getElementById("su").value);
+        if (P > 0 && n > 0 && r > 0) {
+            let A = P * ((1 + r)**n)
+            document.getElementById("inte").innerHTML = A + 'VND'
+        }
+        else
+            document.getElementById("inte").innerHTML = 'Lỗi nhập liệu'
+
+    }
+
+</script>

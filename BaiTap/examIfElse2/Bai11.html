@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--5 triệu VNĐ trở xuống: 5% TNTT-->
+<!--TNTT trên 5 triệu VNĐ :10% TNTT - 0,25 triệu VNĐ-->
+<!--TNTT trên 10 triệu VNĐ :15% TNTT - 0,75 triệu VNĐ-->
+<!--TNTT trên 18 triệu VNĐ :20% TNTT - 1,65 triệu VNĐ-->
+<!--TNTT trên 32 triệu VNĐ :25% TNTT - 3,25 triệu VNĐ-->
+<!--TNTT trên 52 triệu VNĐ :30 % TNTT - 5,85 triệu VNĐ-->
+<!--Trên 80 triệu VNĐ :35% TNTT - 9,85 trđ-->
+<body>
+    Nhập số tiền thu nhập tính thuế :
+        <input type="number" id="mo"> <br>
+            <button onclick="ta()"> Tính Tiền Thuế</button>
+    <p> Số tiền thuế là:</p>
+    <div id="tax"></div>
+</body>
+</html>
+<script>
+    function ta() {
+        let a = +(document.getElementById("mo").value);
+        if (a > 0) {
+            if (a > 80) {
+                let t = (a * 0.35) - 9.85;
+                document.getElementById("tax").innerHTML = t + ' tr VND';
+            } else if (a > 52) {
+                let t = (a * 0.3) - 5.85;
+                document.getElementById("tax").innerHTML = t + ' tr VND';
+            } else if (a > 32) {
+                let t = (a * 0.25) - 3.25;
+                document.getElementById("tax").innerHTML = t + ' tr VND';
+            } else if (a > 18) {
+                let t = (a * 0.2) - 1.65;
+                document.getElementById("tax").innerHTML = t + ' tr VND';
+            } else if (a > 10) {
+                let t = (a * 0.15) - 0.75;
+                document.getElementById("tax").innerHTML = t + ' tr VND';
+            } else if (a > 5) {
+                let t = (a * 0.1) - 0.25;
+                document.getElementById("tax").innerHTML = t + ' tr VND';
+            } else {
+                let t = a * 0.05;
+                document.getElementById("tax").innerHTML = t + ' tr VND';
+            }
+        }
+        else
+            document.getElementById("tax").innerHTML= 'Lỗi nhập số tiền';
+
+    }
+</script>

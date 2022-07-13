@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện Tích tam giác vuông</title>
+</head>
+<body>
+  Nhập cạnh kề thứ nhất :
+    <input type="text" id="edge1"> <br>
+  Nhập cạnh kề thứ 2 :
+    <input type="text" id="edge2"> <br>
+      <button onclick="aReA()">Tính diện tích</button>
+  <p>Diện tích hình chữ nhật là :</p>
+    <div id="kq"></div>
+</body>
+</html>
+<script>
+  function aReA() {
+    let a = +(document.getElementById("edge1").value);
+    let b = +(document.getElementById("edge2").value);
+
+    if (a > 0 && b > 0) {
+      let S = (a*b)/2;
+      document.getElementById("kq").innerHTML = S;
+    }
+    else
+      alert('Nhập sai rồi! stupid!!');
+  }
+</script>

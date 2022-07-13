@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 1</title>
+</head>
+<body>
+    Nhập hệ số bậc 1 :
+        <input type="number" id="a1"> <br>
+    Nhập hằng số :
+        <input type="number" id="a0"><br>
+    <button onclick="per1()">Tính nghiệm</button>
+    <div id="nghiem"></div>
+</body>
+</html>
+<script>
+    function per1() {
+        let a = +(document.getElementById("a1").value);
+        let b = +(document.getElementById("a0").value);
+
+        if (a == 0 && b == 0) {
+            document.getElementById("nghiem").innerHTML = ' Phương trình có vô số nghiệm ';
+        } else if (a == 0 && b != 0) {
+            document.getElementById("nghiem").innerHTML = 'Phương trình vô nghiệm';
+        } else {
+            let x = -b / a;
+            document.getElementById("nghiem").innerHTML = "Phương trình có nghiệm là : " + x;
+        }
+    }
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 2</title>
+</head>
+<body>
+  Nhập hệ số bậc 2 :
+    <input type="number" id="a2"> <br>
+  Nhập hệ số bậc 1 :
+    <input type="number" id="a1"> <br>
+  Nhập hằng số :
+    <input type="number" id="a0"><br>
+      <button onclick="perform()">Tính nghiệm</button>
+
+  <div id="test"></div>
+</body>
+</html>
+<script>
+  function perform() {
+    let a = +(document.getElementById("a2").value);
+    let b = +(document.getElementById("a1").value);
+    let c = +(document.getElementById("a0").value);
+
+    if (a != 0) {
+      let delta = (b*b) - (4*a*c);
+      if (delta < 0 ) {
+        document.getElementById("test").innerHTML = 'Phương Trình Vô Nghiệm'
+      }
+      else if (delta == 0) {
+        let  x = -b / (2*a);
+        document.getElementById("test").innerHTML = 'Phương trình có nghiệm kép : x1 = x2 = '+ x;
+      }
+      else {
+        let x1 = (-b + Math.sqrt(delta))/(2*a);
+        let x2 = (-b - Math.sqrt(delta))/(2*a);
+        document.getElementById("test").innerHTML = 'Phương trình có 2 nghiệm là: ' + x1 + 'và' + x2;
+      }
+    }
+    else {
+      document.getElementById("test").innerHTML = 'Phương trình trở thành phương trình bậc 1'
+    }
+  }
+</script>

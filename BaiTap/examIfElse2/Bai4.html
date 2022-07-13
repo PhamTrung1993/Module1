@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình chữ nhật</title>
+</head>
+<body>
+    Nhập chiều dài hình chữ nhật :
+        <input type="text" id="length"> <br>
+    Nhập chiều rộng hình chữ nhật :
+        <input type="text" id="width"> <br>
+    <button onclick="aReA()">Tính diện tích</button>
+    <p>Diện tích hình chữ nhật là :</p>
+    <div id="kq"></div>
+</body>
+</html>
+<script>
+    function aReA() {
+        let a = +(document.getElementById("length").value);
+        let b = +(document.getElementById("width").value);
+
+        if (a > 0 && b > 0) {
+            let S = a*b;
+            document.getElementById("kq").innerHTML = S;
+        }
+        else
+            alert('Nhập sai rồi! stupid!!');
+    }
+</script>

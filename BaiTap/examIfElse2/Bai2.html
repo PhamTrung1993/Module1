@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+    <td><input type="text" id="cubit"></td>
+    <td><select id="from" >
+      <option value="ft">feet</option>
+      <option value="m">mét</option>
+    </select></td>
+    <td><select id="to">
+      <option value="m">mét</option>
+      <option value="ft">feet</option>
+    </select></td>
+    <td>
+      <button onclick="chuyenDoi()">Convert</button>
+    </td>
+  </tr>
+</table>
+<br>
+<div id="length"></div>
+</body>
+</html>
+<script>
+  function chuyenDoi() {
+    let a = +(document.getElementById("cubit").value);
+    let k = document.getElementById("from").value;
+    let f = document.getElementById("to").value;
+
+    if (k == "ft" && f == "m") {
+      let d = a/3.2808 ;
+      document.getElementById("length").innerHTML = ' số mét là: ' + d;
+    }
+    else if (k == "m" && f == "ft") {
+      let d = a * 3.2808;
+      document.getElementById("length").innerHTML = ' số mét là: ' + d;
+    }
+    else
+      document.getElementById("length").innerHTML = ' như cũ ';
+  }
+</script>
