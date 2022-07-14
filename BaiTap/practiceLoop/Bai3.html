@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ tam giác vuông</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+
+ for (let i = 0; i < 5; i++) {
+   for (let j = 0; j <= i; j++) {
+     document.write("*");
+   }
+  document.write("<br/>");
+}
+ document.write("<br/>");
+
+ for (let i = 5;i > 0;i--) {
+   for (let j = 1; j <=i;j++){
+     document.write("*");
+   }
+   document.write('<br/>');
+ }
+
+let row = '';
+for (let i = 1 ;i <= 5; i++ ){
+  for ( let j =1; j <= (5-i);j++) {
+      row += "&nbsp&nbsp;";
+        }
+    for (let k = 1;k <= i; k++) {
+        row +='*';
+    }
+    row += "<br/>";
+    }
+    document.write(row);
+
+    document.write("<br/>");
+    let row1 = "";
+    for (let i = 0;i <= 5;i++) {
+        for( let j = 1;j <=i;j++) {
+            row1 += "&nbsp&nbsp;";
+        }
+        for (let j = 5; j > i;j--) {
+            row1 += "*"
+        }
+        row1 += "<br/>";
+    }
+    document.write(row1);
+</script>

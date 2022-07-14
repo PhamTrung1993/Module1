@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+let Rect = '';
+  for (let i = 0 ; i <= 7;i++) {
+    for (let j = 0; j <= 21;j++) {
+       if (i == 0 || i == 7) {
+         Rect += '*';
+       }
+       else {
+         if (j == 0 || j == 21) {
+           Rect += '*';
+         }
+         else {
+           Rect += '&nbsp&nbsp';
+         }
+       }
+      }
+    Rect += '<br/>';
+  }
+  document.write(Rect);
+</script>

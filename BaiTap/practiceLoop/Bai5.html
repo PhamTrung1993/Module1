@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Nhập số tiền vay :
+        <input type="number" id="mn"> <br>
+    Nhập số tháng:
+        <input type="number" id="Month"><br>
+    Lãi suất hàng tháng :
+        <input type="number" id="Lai"><br>
+            <button onclick="lai()"> Tính Tiền Lãi</button>
+    <p> Số tiền lãi là:</p>
+    <div id="inTe"></div>
+</body>
+</html>
+<script>
+    function lai() {
+
+        let a = +(document.getElementById("mn").value);
+        let b = +(document.getElementById("Month").value);
+        let c = +(document.getElementById("Lai").value);
+        let T = a;
+        if (a > 0 && b > 0 && c > 0) {
+            for (let i = 1; i <= b; i++) {
+                T = T * (1 + c);
+            }
+            document.getElementById("inTe").innerHTML = T + 'VND'
+        }
+    }
+
+
+</script>
