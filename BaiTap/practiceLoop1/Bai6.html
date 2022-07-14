@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let s = 0;
+  let c = 0;
+   for (let i = 1;i < 1000;i++) {
+
+     if (c < 30) {
+       if (i % 7 == 0) {
+         c++;
+         s = s+i;
+         document.write(i + "<br>")
+       }
+     }
+     else {
+       break;
+     }
+   }
+   document.write("Tổng " + c + " số chia hết cho 7 là:" + s)
+</script>

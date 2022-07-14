@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy Fibonacci</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let pNun = 0;
+  let nNun = 1;
+  let i = 1;
+
+  while (i < 1000) {
+
+    let sum = pNun+nNun;
+    pNun = nNun;
+    nNun = sum;
+    i++
+    document.write( pNun + "<br>");
+  }
+</script>

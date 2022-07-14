@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa của một số nguyên dương</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let n = parseInt(prompt("Nhập số nguyên dương cần tìm giai thừa : ",''));
+  let t = 1;
+  if (n < 0){
+    document.write("Số âm không tồn tại giai thừa")
+  }
+  else if (n == 1 || n == 0) {
+    document.write("giai thừa là : 1");
+  }
+  else {
+    for (let i = 1; i <= n; i++) {
+      t = t * i;
+    }
+    document.write("giai thừa của số " + n + " là: " + t);
+  }
+</script>

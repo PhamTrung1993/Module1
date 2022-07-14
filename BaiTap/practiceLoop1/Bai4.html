@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số fibonacci đầu tiên chia hết cho 5</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let pNumm = 0;
+    let nNumm = 1;
+        for (let i = 1;i <= 100;++i) {
+            if (pNumm % 5 == 0 && pNumm != 0 ) {
+                document.write("số " + pNumm + " là số fibonacci đầu tiên chia hết cho 5");
+            break;
+            }
+            let sum1 = pNumm + nNumm;
+                pNumm = nNumm;
+                nNumm = sum1 ;
+  }
+</script>

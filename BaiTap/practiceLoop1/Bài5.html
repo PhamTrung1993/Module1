@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng 20 số fibonacci đầu tiên</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    let pNun1 = 0;
+    let nNun1 = 1;
+    let total = 0;
+
+    for (let i = 1; i <= 10;i++) {
+      document.write(pNun1 + "<br>")
+      total = total +  pNun1;
+      let sum2 = pNun1+nNun1;
+      pNun1 = nNun1;
+      nNun1 = sum2;
+
+    }
+    document.write("Tổng là : " + total);
+
+
+
+</script>

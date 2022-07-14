@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy Fibonacci</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let nun = parseInt(prompt("Nhập số lượng số fibonacci cần hiển thị :",''));
+    checkFBNC(nun);
+
+    function checkFBNC() {
+        let pNun = 0;
+        let nNun = 1;
+
+        for (let i = 1; i <= nun; ++i) {
+          document.write( pNun + "<br>");
+          let sum = pNun+nNun;
+                pNun = nNun;
+                nNun = sum;
+            }
+
+    }
+
+</script>
