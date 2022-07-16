@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giai thua</title>
+</head>
+<body>
+<h4>Bài 1: Tính giai thừa của 1 số nguyên dương x nhập từ bàn phím.</h4>
+
+Nhập số nguyên dương x cần tính giai thừa:
+<input type="text" id="pos"><br><br>
+<button onclick="fact()">Factorial</button>
+<br><br>
+<div id="res"></div>
+</body>
+</html>
+<script>
+  function fact(){
+    let x = Number(document.getElementById("pos").value);
+    let F = 1;
+    if(x == 0 || x == 1) {
+      document.getElementById("res").innerHTML = 'Giai thừa là 1.'
+    }
+    else {
+      for (let i = 1; i <= x; i++) {
+            F = F*i;
+      }
+      document.getElementById("res").innerHTML = 'Giai thừa của số ' + x + ' là :' + F;
+    }
+  }
+</script>

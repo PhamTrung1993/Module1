@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra các số nguyên</title>
+</head>
+<body>
+<h4> Bài 4 :Viết chương trình cho phép nhập vào số n, in ra các số nguyên từ 1-n.</h4>
+</body>
+</html>
+<script>
+  let n = +(prompt("Nhập vào số nguyên n :",''));
+
+  if (n < 1){
+    alert("Hãy nhập lại số nguyên dương lớn hơn 1!");
+  }
+  else {
+    document.write("Các số nguyên từ 1 đến " + n + " là: " + "<br/>")
+  for (let i = 1 ; i <= n ; i++) {
+     document.write(i + " " );
+    }
+  }
+</script>

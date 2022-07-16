@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15 số đầu tiên chia hết cho 3</title>
+</head>
+<body>
+<h4>Bài 2: Viết chương trình in ra 15 số đầu tiên chia hết cho 3</h4>
+</body>
+</html>
+<script>
+    let i=1;
+    let count = 0;
+    let asso = "";
+    while (count<15){
+        if (i % 3 == 0){
+            asso += i + " ";
+            count++;
+        }
+        i++;
+    }
+   document.write("15 số đầu tiên chia hết cho 3 là: "+ "<br/>" + asso);
+</script>
