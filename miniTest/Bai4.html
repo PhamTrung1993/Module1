@@ -9,15 +9,17 @@
 </body>
 </html>
 <script>
-  let n = +(prompt("Nhập vào số nguyên n :",''));
-
-  if (n < 1){
-    alert("Hãy nhập lại số nguyên dương lớn hơn 1!");
-  }
-  else {
-    document.write("Các số nguyên từ 1 đến " + n + " là: " + "<br/>")
-  for (let i = 1 ; i <= n ; i++) {
-     document.write(i + " " );
+    var n;
+    let i=1;
+    do {
+        n = +(prompt("Nhập vào số nguyên dương n :",''));
     }
-  }
+    while ( n < 1) ;
+
+    document.write("Các số nguyên từ 1 đến " + n + " là: " + "<br/>")
+    while (i <= n) {
+        document.write(i + " " );
+        i++;
+    }
+
 </script>
