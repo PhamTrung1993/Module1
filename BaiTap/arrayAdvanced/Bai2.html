@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max</title>
+</head>
+<body>
+<h3>bài 2:Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
+  Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.</h3>
+</body>
+</html>
+<script>
+    let am = [2,25,6,4,8,12,15,2,9,17];
+    let max1 = am[0];
+    let c = 0;
+    for (let i = 0; i < 10; i++) {
+        if (max1 < am[i]) {
+            max1 = am[i];
+            c = i;
+        }
+    }
+document.write("Số lớn nhất trong dãy số là: " + max1 + " Ở vị trí số: " + c);
+</script>

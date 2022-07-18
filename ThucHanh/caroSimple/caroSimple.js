@@ -1,7 +1,7 @@
 let b = document.getElementById("carogame");
 let board = [];
 let data = "";
-for (let i = 0; i <5; i++) {
+for (let i = 0; i < 5; i++) {
     board[i] = new Array(0,0,0,0,0);
 }
 for (let i = 0 ; i < 5; i++) {

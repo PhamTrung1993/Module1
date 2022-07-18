@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó.
+    In ra giá trị trung bình của các phần tử trong mảng.</h4>
+</body>
+</html>
+<script>
+
+    let n = +prompt("Nhập số lượng phần tử trong mảng");
+    let o = new Array(n);
+    let average;
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+        o[i] = +prompt("Nhập giá trị của phần tử " + i + ":");
+    }
+    document.write("mảng vừa tạo là: " + o +'<br/>')
+    let max = o[0];
+    for (let j = 0;j < o.length;j++) {
+        sum = sum + o[j];
+        if (max < o[j]) {
+            max = o[j];
+        }
+    }
+    average = sum/o.length ;
+    document.write("Số lớn nhất trong mảng là : " + max +'<br/>');
+    document.write("Giá trị trung bình của mảng là: " + average + '<br/>');
+</script>

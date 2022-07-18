@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let b = prompt();
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result23 = [];
+
+    for(let x=0; x<b.length; x++)
+    {
+        if(UPPER.indexOf(b[x]) !== -1)
+        {
+            result23.push(b[x].toLowerCase());
+        }
+        else if(LOWER.indexOf(b[x]) !== -1)
+        {
+            result23.push(b[x].toUpperCase());
+        }
+        else
+        {
+            result23.push(b[x]);
+        }
+    }
+
+    console.log(result23.toUpperCase());
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let a = +prompt();
+  let arra = a.toString();
+  let result = [arra[0]];
+
+  for (let i = 1; i < arra.length;i++) {
+    if ((arra[i-1]%2 === 0)&&(arra[i]%2 === 0)) {
+            result.push('-',arra[i]);
+    }
+    else    {
+        result.push(arra[i]);
+    }
+  }
+  console.log(result.join(''))
+</script>

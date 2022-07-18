@@ -63,6 +63,6 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-span p {
+span b {
     display: inline-block;
 }

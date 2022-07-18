@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số nguyên âm</title>
+</head>
+<body>
+<h4>Viết chương trình đếm số nguyên âm trong một chuỗi</h4>
+</body>
+</html>
+<script>
+  let n = +prompt("Nhập số lượng phần tử trong mảng");
+  let arr2 = new Array(n);
+  let count = 0;
+  let extra = '';
+  for (let i = 0; i < n; i++) {
+    arr2[i] = +prompt("Nhập giá trị của phần tử " + i + ":");
+  }
+  document.write("mảng vừa tạo là: " + arr2 +'<br/>')
+
+  for ( let i = 0 ; i < arr2.length; i++) {
+    if (arr2[i] < 0) {
+      count = count + 1;
+      extra = extra + arr2[i] + ',';
+    }
+  }
+  document.write("Trong mảng có " + count + " số nguyên âm là: " + extra)
+</script>

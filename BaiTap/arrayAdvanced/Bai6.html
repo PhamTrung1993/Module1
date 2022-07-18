@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So sánh 1 số nguyên V nhập từ bàn phím</title>
+</head>
+<body>
+<h4>Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+  Chương trình tìm xem V có nằm trong mảng số nguyên không?
+  Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".</h4>
+</body>
+</html>
+<script>
+  let n = +prompt("Nhập số lượng phần tử trong mảng");
+  let arr3 = new Array(n);
+
+  for (let i = 0; i < n; i++) {
+    arr3[i] = +prompt("Nhập giá trị của phần tử " + i + ":");
+  }
+  document.write("mảng vừa tạo là: " + arr3 +'<br/>')
+  let V = +prompt("Nhập số nguyen V cần kiểm tra: ");
+  let value1 = false ;
+  for (let j = 0; j < arr3.length;j++) {
+    if (V === arr3[j]) {
+        value1 = true;
+        break;
+    }
+  }
+  if (value1 === true) {
+     document.write( V + " is in the array");
+  }
+  else {
+      document.write(V + " is not in the array");
+  }
+</script>

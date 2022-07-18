@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sắp xếp theo thứ tự giảm dần</title>
+</head>
+<body>
+<h3>Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+  Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.</h3>
+</body>
+</html>
+<script>
+  let n = +prompt("Nhập số lượng phần tử trong mảng");
+  let arr5 = new Array(n);
+
+  let i,j;
+  for ( i = 0; i < n; i++) {
+    arr5[i] = +prompt("Nhập giá trị của phần tử " + i + ":");
+  }
+  document.write("mảng vừa tạo là: " + arr5 +'<br/>');
+
+  let temp = arr5[0]
+  for (i = 0 ; i < arr5.length -1; i++){
+    for (j = i+1; j < arr5.length; j++) {
+      if (arr5[i] > arr5[j]) {
+        temp = arr5[j];
+        arr5[j] = arr5 [i];
+        arr5[i] = temp;
+      }
+    }
+  }
+  document.write("Mảng sau khi sắp xếp: " + arr5);
+</script>
