@@ -10,14 +10,49 @@
 </body>
 </html>
 <script>
-    let am = [2,25,6,4,8,12,15,2,9,17];
-    let max1 = am[0];
-    let c = 0;
-    for (let i = 0; i < 10; i++) {
-        if (max1 < am[i]) {
-            max1 = am[i];
-            c = i;
+//     let am = [2,25,6,4,8,12,15,2,9,17];
+//     let max1 = am[0];
+//     let c = 0;
+//     for (let i = 0; i < 10; i++) {
+//         if (max1 < am[i]) {
+//             max1 = am[i];
+//             c = i;
+//         }
+//     }
+// document.write("Số lớn nhất trong dãy số là: " + max1 + " Ở vị trí số: " + c);
+    let n = +prompt("Nhập số lượng phần tử trong mảng");
+    let am = new Array(n);
+    let count = 0
+    for (let i = 0; i < n; i++) {
+        let value = +prompt("Nhập giá trị của phần tử " + (i+1) + ":");
+        let check = true;
+        for (let j = 0; j <= i; j++) {
+            if (value === am[j]) {
+                check = false;
+                break;
+            }
+        }
+        if (check) {
+            am[i] = value;
+            count = 0;
+        }
+        else {
+            i--;
+            count++
+        }
+        if (count === 3) {
+            alert("Nhập nhiều lần sai!");
+            break;
         }
     }
-document.write("Số lớn nhất trong dãy số là: " + max1 + " Ở vị trí số: " + c);
+    document.write("mảng vừa tạo là: " + am +'<br/>')
+    for (let i = 0; i < am.length;i++) {
+        if (max1 < am[i]) {
+             max1 = am[i];
+             c = i;
+        }
+    }
+ document.write("Số lớn nhất trong dãy số là: " + max1 + " Ở vị trí số: " + c);
+
+
 </script>
