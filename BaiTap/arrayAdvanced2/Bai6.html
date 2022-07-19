@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thay Thế ký tự</title>
+</head>
+<body>
+<h3></h3>
+</body>
+</html>
+<script>
+    let n = +prompt("Nhập số lượng phần tử trong mảng ");
+    let arr28 = new Array(n);
+
+    for (let i = 0; i < n; i++) {
+        arr28[i] = prompt("Nhập giá trị của phần tử " + i + ":");
+    }
+    document.write("mảng vừa tạo là: " + arr26 +'<br/>');
+
+    for (let i = 0; i <arr28.length;i++) {
+        if (arr28[i] ===  '-' ) {
+            arr28[i] = '_';
+        }
+    }
+    document.write("Mảng vừa thay đổi là: " + arr28)
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</h3>
+</body>
+</html>
+<script>
+    let n = +prompt("Nhập số lượng phần tử trong mảng 1");
+    let m = +prompt("Nhập số lượng phần tử trong mảng 2");
+    let arr26 = new Array(n);
+    let arr27 = new Array(m);
+    let isEqual;
+    for (let i = 0; i < arr26.length; i++) {
+        arr26[i] = +prompt("Nhập giá trị của phần tử " + i + ":");
+    }
+    document.write("mảng vừa tạo là: " + arr26 +'<br/>');
+
+    for (let j = 0; j < arr27.length; j++) {
+        arr27[j] = +prompt("Nhập giá trị của phần tử " + j + ":");
+    }
+    document.write("mảng vừa tạo là: " + arr27 +'<br/>');
+
+    if (arr26.length !== arr27.length) {
+        isEqual = false;
+    }
+    else {
+        for (let i = 0 ; i < arr26.length;i++) {
+            if (arr26[i] !== arr27[i]) {
+                isEqual = false;
+                break;
+            }
+            else {
+                isEqual = true;
+            }
+        }
+    }
+    if (isEqual === true ) {
+        document.write("2 mảng giống nhau")
+    }
+    else {
+        document.write(" 2 mảng khác nhau")
+    }
+</script>

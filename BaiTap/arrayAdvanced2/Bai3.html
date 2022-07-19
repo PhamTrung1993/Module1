@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đếm số ký tự số</title>
+</head>
+<body>
+<h4>Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
+  Chương trình này đếm số ký tự số trong mảng.</h4>
+</body>
+</html>
+<script>
+  let n = +prompt("Nhập số lượng phần tử trong mảng");
+  let arr24 = new Array(n)
+  let numBer = ['1','2','3','4','5','6','7','8','9'];
+  for (let i = 0; i < n; i++) {
+    arr24[i] = prompt("Nhập giá trị của phần tử " + i + ":");
+  }
+  document.write("mảng vừa tạo là: " + arr24 +'<br/>')
+
+  let count = 0;
+  for ( let i = 0 ; i < arr24.length; i++) {
+    if  (numBer.indexOf(arr24[i]) !== -1) {
+      count = count + 1;
+    }
+  }
+  document.write("số lượng ký tự số có trong mảng là: " + count)
+</script>
