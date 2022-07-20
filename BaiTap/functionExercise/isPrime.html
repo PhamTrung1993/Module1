@@ -5,11 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-
+    Number <input type="number" id="input" oninput="isPrime(this.value)"
+    onchange="isPrime(this.value)"/> is : <span id="output"></span>
 </body>
 </html>
 <script>
-  function isPrime(number) {
+  function checkPrime(number) {
     if (number < 2)
     return false;
           for (let i = 2;i <=Math.sqrt(number);i++) {
@@ -19,12 +20,17 @@
     }
     return true;
   }
-
-  let number = +prompt("Nhập số nguyên cần kiểm tra số nguyên tố: ");
-  if (isPrime(number)) {
-    document.write("Số " + number + " là số nguyên tố");
-  }
-  else {
-    document.write("Số " + number + " không phải số nguyên tố");
-  }
+function isPrime() {
+    let number = +(document.getElementById("input").value);
+    let result = "";
+    if (checkPrime(number)) {
+        result = " prime"
+    } else {
+        result = " not prime"
+    }
+    if (number == ''){
+        result = " ";
+    }
+    document.getElementById("output").innerHTML = result;
+}
 </script>
