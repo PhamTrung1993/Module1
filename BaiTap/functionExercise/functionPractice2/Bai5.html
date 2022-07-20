@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check min number</title>
+</head>
+<body>
+<h3>Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</h3>
+    Nhập số thứ nhất :
+      <input type="number" id="numberone">
+            Nhập số thứ Hai :
+              <input type="number" id="numbertwo">
+                Nhập số thứ Ba :
+                  <input type="number" id="numberthree">
+<br>
+    <button onclick="showMin()">Check Min</button>
+        <button onclick="reset()">Reset</button>
+<br>
+
+    <div id="output"></div>
+
+</body>
+</html>
+<script>
+  function showMin() {
+    let Num1 = +document.getElementById("numberone").value;
+    let Num2 = +document.getElementById("numbertwo").value;
+    let Num3 = +document.getElementById("numberthree").value;
+
+    document.getElementById("output").innerHTML = "Số nhỏ nhất trong 3 số là: " + checkMin(Num1,Num2,Num3);
+  }
+  function checkMin(num1,num2,num3) {
+    if (num1 <= num2 && num1 <= num3) {
+      return num1;
+    }
+    else if (num2 <= num3) {
+      return num2;
+    }
+    else {
+      return num3;
+    }
+
+  }
+  function reset() {
+      document.getElementById("numberone").value = '';
+      document.getElementById("numbertwo").value = '';
+      document.getElementById("numberthree").value = '';
+      document.getElementById("output").innerHTML = " ";
+  }
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>perimeter and Area</title>
+</head>
+<body>
+<h3>Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</h3>
+Nhập bán kính hình tròn:
+    <input type="number" id="number"><br>
+        <button onclick="showPerimeter()">Perimeter</button>
+            <button onclick="showArea()">Area</button>
+                <button onclick="reset()">Reset</button>
+    <div id="output"></div>
+
+</body>
+</html>
+<script>
+    let Pi = 3.14;
+    function showPerimeter() {
+        let r = Number(document.getElementById("number").value);
+        let per1 = getPerimeter(r);
+        document.getElementById("output").innerHTML = per1;
+    }
+    function showArea() {
+        let r = Number(document.getElementById("number").value);
+        let area1 = getArea(r);
+        document.getElementById("output").innerHTML= area1;
+    }
+    function getPerimeter(r) {
+        let C = r * 2 * Pi;
+        return C;
+    }
+    function getArea(r) {
+        let S = r*r*Pi;
+        return S;
+    }
+    function reset() {
+        document.getElementById("number").value = '';
+        document.getElementById("output").innerHTML = '';
+    }
+</script>

@@ -5,6 +5,42 @@
     <title>Title</title>
 </head>
 <body>
-hgh
+<div id="result"></div>
 </body>
 </html>
+<script>
+    let star = ['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
+    let Constellation = ['Ursa Minor','Tarurus','Cygnus','Lyra','Aquila','Ursa Major','Leo'];
+
+    let Name = prompt("Nhập vào tên ngôi sao");
+
+    let outcome = getConstellation(Constellation);
+    document.getElementById("result").innerHTML = outcome;
+
+    function getConstellation(array) {
+        let result = '';
+        let index = find(star,Name);
+
+        if (index === -1) {
+            result = 'Không tìm thấy ngôi sao nào';
+        }
+        else  {
+            result = 'Ngôi sao ' + Name + ' thuộc chòm sao: ' + array[index];
+        }
+        return  result;
+    }
+    function find(array,words) {
+        let index = 0;
+        for (let i = 0; i < array.length;i++) {
+            if (array[i] === words) {
+                index = i;
+                break;
+            }
+            else index = -1;
+        }
+        return index;
+    }
+
+
+
+</script>

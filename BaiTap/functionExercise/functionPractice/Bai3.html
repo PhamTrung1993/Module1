@@ -21,32 +21,29 @@ Nhập vào số thứ hai : <input type="number" id="number2"><br>
 
         let result = "";
        if (num1 > num2) {
-           alert("Số " + num1 + "lớn hơn số " + num2);
+           alert("Số " + num1 + " lớn hơn số " + num2);
        }
         else
             result = checkelder(num1,num2);
 
         document.getElementById("total").innerHTML = result;
-            // if (num1 = num2) {
-       //     sum = num1 + num2;
-       //     result = 'số' + num1 + ' bằng số ' + num2 + ' và có tổng là: ' + sum;
-       // }
-       // else {
-       //     sum = num1 + num2;
-       //     result = 'số' + num1 + ' nhỏ hơn số ' + num2 + ' và có tổng là: ' + sum;
+
     }
     function checkelder(num1,num2) {
         let result = "";
-        let sum = 0
+
         if ( num1 === num2) {
-            sum = num1 + num2;
-            result = 'số' + num1 + ' bằng số ' + num2 + ' và có tổng là: ' + sum;
+
+            result = 'số' + num1 + ' bằng số ' + num2 + ' và có tổng là: ' + getSum(num1,num2);
         }
         else if (num1 < num2) {
-            sum = num1 + num2;
-            result = 'số' + num1 + ' nhỏ hơn số ' + num2 + ' và có tổng là: ' + sum;
+
+            result = 'số' + num1 + ' nhỏ hơn số ' + num2 + ' và có tổng là: ' + getSum(num1,num2);
         }
         return result;
+    }
+    function getSum(num1,num2) {
+        return num1+num2;
     }
     function reset() {
         document.getElementById("number1").value = "";

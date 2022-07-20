@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check type number</title>
+</head>
+<body>
+<h3>Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+  Nếu là ký tự số hàm trả về true, ngược lại trả về false.</h3>
+Nhập ký tự cần kiểm tra
+  <input type="text" id="checkNumber">
+      <button onclick="showResult()">Check</button>
+        <button onclick="reset()">Reset</button>
+  <div id="result"></div>
+</body>
+</html>
+<script>
+  function showResult() {
+    let char = document.getElementById("checkNumber").value
+    document.getElementById("result").innerHTML = checkNumber(char);
+  }
+  function checkNumber(char) {
+  let Num = ['1','2','3','4','5','6','7','8','9'];
+    if (Num.indexOf(char) !== -1) {
+    return 'true'
+
+    }
+    else {
+      return 'false'
+    }
+
+  }
+  function reset() {
+      document.getElementById("checkNumber").value = "";
+      document.getElementById("result").innerHTML = " ";
+  }
+</script>

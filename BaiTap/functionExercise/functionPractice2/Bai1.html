@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Square</title>
+</head>
+<body>
+<h3>Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</h3>
+Bình phương số <input type="number" id="number" oninput="getSquare()"/>là : <span id="result"></span>
+</body>
+</html>
+<script>
+    function getSquare() {
+        let n = Number(document.getElementById("number").value);
+
+        document.getElementById("result").innerHTML = Square(n);
+    }
+    function Square(n) {
+        return n*n;
+    }
+</script>

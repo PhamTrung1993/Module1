@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factorial</title>
+</head>
+<body>
+<h3>Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</h3>
+
+ Giai thừa của số <input type="number" id="number" oninput="showFactorial()"> là :<span id="output"></span>
+
+</body>
+</html>
+<script>
+   function showFactorial() {
+        let number = +(document.getElementById("number").value);
+
+        let factorial = getFactorial(number);
+
+
+        document.getElementById("output").innerHTML = factorial;
+
+
+
+    }
+    function getFactorial(number) {
+       let factorial = 1;
+       if (0<=number && number < 2) {
+           return 1;
+       }
+       else if (number > 2){
+           for (let i = 2 ; i <= number;i++) {
+               factorial = factorial * i;
+           }
+           return factorial;
+       }
+       else return " ";
+    }
+
+
+</script>
