@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tăng đối số</title>
+</head>
+<body>
+<h4>Bài 2:Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm.
+  Gọi hàm từ trong phần body của trang web và hiển thị kết quả lên màn hình.</h4>
+<br><br>
+Giá trị đối số <input type="number" id="number" oninput="augment()"/>là : <span id="result"></span>
+</body>
+</html>
+<script>
+  function augment() {
+    let number = Number(document.getElementById("number").value);
+    let result = number + 1;
+    if (number == " ") {
+      result = ' ';
+    }
+    document.getElementById("result").innerHTML = result;
+  }
+</script>

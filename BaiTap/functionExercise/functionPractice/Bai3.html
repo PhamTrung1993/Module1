@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập vào số thứ nhất : <input type="number" id="number1"><br>
+Nhập vào số thứ hai : <input type="number" id="number2"><br>
+<button onclick="compare()">So sánh</button>
+<button onclick="reset()">Reset</button>
+<br><br>
+
+<div id="total"></div>
+</body>
+</html>
+<script>
+    function compare() {
+        let num1 = Number(document.getElementById("number1").value);
+        let num2 = Number(document.getElementById("number2").value);
+
+        let result = "";
+       if (num1 > num2) {
+           alert("Số " + num1 + "lớn hơn số " + num2);
+       }
+        else
+            result = checkelder(num1,num2);
+
+        document.getElementById("total").innerHTML = result;
+            // if (num1 = num2) {
+       //     sum = num1 + num2;
+       //     result = 'số' + num1 + ' bằng số ' + num2 + ' và có tổng là: ' + sum;
+       // }
+       // else {
+       //     sum = num1 + num2;
+       //     result = 'số' + num1 + ' nhỏ hơn số ' + num2 + ' và có tổng là: ' + sum;
+    }
+    function checkelder(num1,num2) {
+        let result = "";
+        let sum = 0
+        if ( num1 === num2) {
+            sum = num1 + num2;
+            result = 'số' + num1 + ' bằng số ' + num2 + ' và có tổng là: ' + sum;
+        }
+        else if (num1 < num2) {
+            sum = num1 + num2;
+            result = 'số' + num1 + ' nhỏ hơn số ' + num2 + ' và có tổng là: ' + sum;
+        }
+        return result;
+    }
+    function reset() {
+        document.getElementById("number1").value = "";
+        document.getElementById("number2").value = "";
+        document.getElementById("total").innerHTML = "";
+    }
+</script>
