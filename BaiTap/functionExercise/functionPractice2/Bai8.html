@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Integer</title>
+</head>
+<body>
+<h3>Bài 8:Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</h3>
+    <button onclick="showArray()">Import Array</button>
+      <button onclick="reset()">Reset</button>
+<br><br>
+  Hàm ban đầu là:
+    <div id="beforearray"></div>
+<br>
+  Hàm sau khi đảo ngược là:
+    <div id="afterarray"></div>
+</body>
+</html>
+<script>
+  function showArray() {
+    let length = +prompt("import array length: ")
+
+    let beforeArray = getArray(length);
+    document.getElementById("beforearray").innerHTML = beforeArray;
+
+    let afterArray = reverseArray(beforeArray);
+    document.getElementById("afterarray").innerHTML = afterArray;
+  }
+
+  function getArray(length) {
+    let array = new Array(length);
+    for (let i = 0; i < array.length;i++) {
+      array[i] = parseInt(prompt("import value of " + (i+1)));
+    }
+    return array;
+  }
+  function reverseArray(array) {
+    let newArray = array.reverse();
+    return newArray
+  }
+  function reset() {
+    document.getElementById("beforearray").innerHTML= " ";
+    document.getElementById("afterarray").innerHTML= " ";
+  }
+</script>

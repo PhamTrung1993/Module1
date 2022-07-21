@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Bài 9:Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.</h3>
+    <button onclick="importArray()">Import Array</button>
+    <div id="Array"></div>
+<br>
+    Ký tự <input type="text" id="text" oninput="showCharacters()"> xuất hiện <span id="output"></span> lần
+<br><br>
+    <button onclick="reset()">Reset</button>
+</body>
+</html>
+<script>
+    var charArray = ''
+    function importArray() {
+        let length = +prompt("import array length: ")
+         charArray = getArray(length);
+        document.getElementById("Array").innerHTML = charArray;
+
+    }
+    function showCharacters() {
+
+        let char = document.getElementById("text").value;
+
+        document.getElementById("output").innerHTML= checkCharacters(char);
+    }
+    function checkCharacters(char) {
+        let count = checkCount(char);
+        if (count > 0) {
+            return count;
+        }
+        else if (count === 0) {
+            return -1;
+        }
+
+    }
+    function checkCount(char) {
+        let count = 0;
+        for (let i = 0 ; i < charArray.length; i++) {
+            if (charArray[i] === char) {
+                count = count +1;
+            }
+        }
+        return count
+    }
+
+    function getArray(length) {
+        let array = new Array(length);
+        for (let i = 0; i < array.length;i++) {
+            array[i] = prompt("import value of " + (i+1));
+        }
+        return array;
+    }
+   function reset() {
+        document.getElementById("Array").innerHTML = "";
+        document.getElementById("text").value = "";
+        document.getElementById("output").innerHTML = "";
+
+    }
+</script>
