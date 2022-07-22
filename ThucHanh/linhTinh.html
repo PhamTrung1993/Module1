@@ -5,9 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-Giá trị đối số <input type="number" id="number" /> tăng
-<div id="total"></div>
-<button onclick="augment()">Tăng</button>
+
 </body>
 </html>
 <script>
@@ -33,14 +31,15 @@ Giá trị đối số <input type="number" id="number" /> tăng
     //     }
     // }
     // console.log(result23.join(''));
-    let number = Number(document.getElementById("number").value);
+    function swap(arr) {
 
-    function augment() {
-        let result = number + 1;
-        if (number == " ") {
-            result = ' ';
-        }
-        document.getElementById("result").innerHTML = result;
+        let temp;
+        temp = arr[0];
+        arr[0] = arr[arr.length - 1];
+        arr[arr.length - 1] = temp;
+        let arrnew = arr
+        console.log(arrnew);
     }
-
+    let arr = [1,2,3,4]
+    swap(arr);
 </script>
