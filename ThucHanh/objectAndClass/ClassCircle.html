@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lớp Hình Tròn</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let Circle = function (radius) {
+    this.radius = radius;
+
+  // Xây dựng phương thức trả về bán kính của hình tròn.
+
+    this.getRadius = function () {
+      return radius;
+    }
+    // Xây dựng phương thức tính diện tích hình tròn
+    this.getArea = function () {
+      return Math.PI * radius * radius;
+    }
+  };
+    // Sử dụng lớp vừa tạo.Tạo đối tượng hình tròn với bán kính là 2
+  let circle = new Circle(10);
+
+  // Truy cập phương thức của lớp hình tròn vừa tạo và gán cho các biến radius,area.
+  let radius = circle.getRadius();
+
+  let area = circle.getArea();
+
+  // Hiển thị bán kính và diện tích
+  alert("radius: " + radius +"; area " + area);
+</script>
