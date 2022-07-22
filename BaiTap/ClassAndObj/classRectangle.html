@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lớp hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000px" height="400px" style="border:1px solid #d3d3d3;"></canvas>
+<p id="result"></p><br>
+<div id="output"></div>
+</body>
+</html>
+<script>
+  let Rectangle = function (length,width) {
+    this.length = length;
+    this.width = width;
+    this.getlength = function () {
+        return this.length;
+      }
+    this.getwidth = function (){
+        return this.width;
+      }
+    this.setlength = function () {
+        this.length = length;
+    }
+    this.setwidth = function () {
+        this.width = width;
+    }
+    this.getCircum = function () {
+      return (length + width) * 2;
+    }
+    this.getarea = function () {
+      return length * width;
+    }
+  }
+
+    Rectangle.prototype.setRectangle = function () {
+      let canvas = document.getElementById("myCanvas");
+      let context = canvas.getContext("2d");
+      context.rect(20, 20, this.length, this.width);
+      context.stroke();
+      document.getElementById("result").innerHTML = "width = " + width + " length = " + length;
+    }
+    // function createRec() {
+    //   let rec = new Rectangle(80,50);
+    //   rec.display();
+    // }
+    // createRec();
+    let rectangle = new Rectangle(200,150);
+    let length = rectangle.getlength();
+    let width = rectangle.getwidth();
+    rectangle.setRectangle();
+    let circum = rectangle.getCircum();
+    let area = rectangle.getarea()
+  document.getElementById("output").innerHTML = "Circle = " + circum + " Area = " + area;
+</script>

@@ -5,41 +5,32 @@
     <title>Title</title>
 </head>
 <body>
-
+<canvas id="myCanvas" width="1368px" height="400px" style="border:1px solid #d3d3d3;"></canvas>
+<p id="result"></p>
+<script>
+    let res = document.getElementById('result');
+    function Rectangle(width, height) {
+        this.width = width;
+        this.height = height;
+        this.circum = function () {
+            return (width + height)*2
+        }
+        this.area = function () {
+            return width * height
+        }
+    }
+    Rectangle.prototype.display = function () {
+        let canvas = document.getElementById("myCanvas");
+        let context = canvas.getContext("2d");
+        context.rect(20, 20, this.width, this.height);
+        context.stroke();
+        res.innerHTML = `width = ${this.width}, height = ${this.height}`
+    }
+    function createRec() {
+        let rec = new Rectangle(50,80);
+        rec.display();
+    }
+    createRec();
+</script>
 </body>
 </html>
-<script>
-    // let str = prompt();
-    // let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    // let LOWER = 'abcdefghijklmnopqrstuvwxyz';
-    // let result23 = [];
-    //
-    // for(let x=0; x<str.length; x++)
-    // {
-    //     // Hàm indexof sẽ trả về giá trị là -1 khi không tìm thấy phần tử trong mảng
-    //     if(UPPER.indexOf(str[x]) !== -1)
-    //     {
-    //         result23.push(str[x].toLowerCase());
-    //     }
-    //     else if(LOWER.indexOf(str[x]) !== -1)
-    //     {
-    //         result23.push(str[x].toUpperCase());
-    //     }
-    //     else
-    //     {
-    //         result23.push(str[x]);
-    //     }
-    // }
-    // console.log(result23.join(''));
-    function swap(arr) {
-
-        let temp;
-        temp = arr[0];
-        arr[0] = arr[arr.length - 1];
-        arr[arr.length - 1] = temp;
-        let arrnew = arr
-        console.log(arrnew);
-    }
-    let arr = [1,2,3,4]
-    swap(arr);
-</script>
