@@ -17,28 +17,35 @@ function Hero(image, top, left, size){
     }
 
     this.moveLeft = function () {
-        this.left = this.left - 10;
+        this.left -= 20;
         console.log('ok: ' + this.left);
     }
-    this.moveBottom = function () {
-        this.top += 10
+    this.moveDown = function () {
+        this.top += 20
+        console.log('ok: ' + this.top)
+    }
+    this.moveUp = function () {
+        this.top -= 20
         console.log('ok: ' + this.top)
     }
 
 }
 
-var hero = new Hero('pikachu.png', 20, 30, 200);
+var hero = new Hero('download (1).jpg', 20, 30, 100);
 
 function start() {
 
-    if (hero.left < window.innerWidth - hero.size) {
+    if (hero.left < window.innerWidth - hero.size && hero.top === 20) {
         hero.moveRight();
     }
-    else if (hero.top < window.innerHeight - hero.size && hero.left < window.innerWidth) {
-    hero.moveBottom();
+    else if (hero.top < window.innerHeight - hero.size && hero.left >0) {
+    hero.moveDown();
     }
-    else if (hero.top < window.innerHeight && hero.left > window.innerWidth - hero.size) {
+    else if (hero.left > 0) {
         hero.moveLeft()
+    }
+    else if (hero.top > 0) {
+        hero.moveUp()
     }
 
     document.getElementById('game').innerHTML = hero.getHeroElement();
