@@ -1,4 +1,5 @@
 class ElectricLamp {
+    status;
     constructor() {
         this.status = false;
     }
