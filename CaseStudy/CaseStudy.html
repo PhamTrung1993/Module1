@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trang web quản lý nước hoa</title>
+  <link rel="stylesheet" href="css/Style.css">
+
+</head>
+<body>
+
+<h1>HỆ THỐNG QUẢN LÝ NƯỚC HOA</h1>
+<table border="1" style="width: 600px; height:300px">
+  <tr>
+    <th colspan="2">Chỉnh sửa hàng trong cửa hàng </th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td><input type="text " id="pefumeName" style="width: 90%"></td>
+  </tr>
+  <tr>
+    <td>sex</td>
+    <td>
+      <select id="sex" style="width: 50%">
+        <option value="Male">Male</option>
+          <option value="FeMale">FeMale</option>
+            <option value="Unisex">Unisex</option>
+    </select>
+  </td>
+  </tr>
+  <tr>
+    <td>TradeMark</td>
+    <td><input type="text" id="tradeMark" style="width: 90%"></td>
+  </tr>
+  <tr>
+    <td>Release Year</td>
+    <td><input type="Date" id="releaseYear" style="width: 60%"></td>
+  </tr>
+  <tr>
+    <td>Incense Group</td>
+    <td><input type="text" id="incenseGroup" style="width: 90%"></td>
+  </tr>
+  <tr>
+    <td>image</td>
+    <td><input type="text" id="img" style="width: 90%"></td>
+  </tr>
+  <tr>
+    <td>price</td>
+    <td><input type="number" id="price" style="width: 90%"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <button id="add" onclick="">Add</button>
+      <button id="save" onclick="">Save</button>
+    </td>
+  </tr>
+</table>
+</body>
+<script src="function.js"></script>
+<script src="Js/perfumeManagement.js"></script>
+<script src="Js/main.js"></script>
+</html>

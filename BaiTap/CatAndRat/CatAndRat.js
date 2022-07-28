@@ -62,29 +62,33 @@ class Cat {
     getWeightCat() {
         return this.weightCat;
     }
+    setWeightCat(weight) {
+        this.weightCat = weight
+    }
 
     getSpeedCat() {
         return this.speedCat;
     }
-    setSpeed(speed) {
+    setSpeedCat(speed) {
         this.speedCat = speed;
     }
     catchTheRat() {
         if (this.rat.speedRat < this.speedCat ) {
-                alert(this.nameCat + "bắt được " + this.rat.nameRat)
                      return true;
         }
         else {
-            alert(this.nameCat + " không bắt được " + this.rat.nameRat)
                  return false;
         }
     }
     eatTheRat() {
-        if (this.rat.live) {
+        if ((this.rat.live) && (this.catchTheRat())) {
             this.weightCat = this.weightCat + this.rat.weightRat;
                 this.rat.live = false;
-                    alert(this.rat.nameRat + " đã bị " + this.nameCat + " ăn")
+                    alert(this.nameCat + " bắt được " + this.rat.nameRat)
+                        alert(this.rat.nameRat + " đã bị " + this.nameCat + " ăn")
         }
+        else
+            alert(this.rat.nameRat + " chạy thoát khỏi " + this.nameCat)
     }
 }
 

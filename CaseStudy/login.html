@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập vào trang quản lý</title>
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+<header>
+    <div>
+        <h1>Welcome!!!</h1>
+    </div>
+</header>
+    <div class="container">
+        <div class="login-form">
+            <form method="post">
+                <h1>Đăng nhập vào trang quản lý</h1>
+                <div class="input-box">
+                    <i></i>
+                    <input type="text" placeholder="Nhập username" id="username" autofocus/>
+                </div>
+                <div class="input-box">
+                    <i></i>
+                    <input type="password" placeholder="Nhập password" id="password"/>
+                </div>
+                <div class="btn-box">
+                    <button type="submit" onclick="checkAndNextPage()">
+                        Đăng nhập
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="Js/login.js"></script>
+</body>
+</html>
