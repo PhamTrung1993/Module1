@@ -7,6 +7,7 @@ h1 {
 }
 td,th {
     text-align: center;
+    border-radius: 5px;
 }
 
 table {
@@ -17,4 +18,33 @@ table {
     font-size: larger;
     background-color: deepskyblue;
     color: white;
+}
+button{
+    padding: 7.5px 15px;
+    border-radius: 5px;
+    background-color: #74f144;
+    color: #ffffff;
+    border: none;
+    outline: none;
+}
+.tieude {
+    font-size: 35px;
+    background-color: #c3f1ea;
+    color: #f521c0
+}
+.table1{
+    width: 600px;
+    height:300px;
+    background-color: #fdb0fc;
+    color: #fd0606;
+    border-radius: 5px;
+}
+body{
+    background-image: url("https://dep.anh9.com/imgs/131020hinh-nen-hoa-nuoc=-xanh-mat.jpg")
+}
+.tieudechinh{
+    font-size: 50px;
+    color: #f144e8;
+    background-image: url("https://file.hstatic.net/200000318987/collection/3_99174fe4ca6a47d09b1a2d6f17a76914.jpg");
+    height: 300px;
 }

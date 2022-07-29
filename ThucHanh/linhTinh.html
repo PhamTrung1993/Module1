@@ -1,29 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Đăng nhập vào trang quản lý</title>
 </head>
 <body>
+
+<button type="submit" onclick="dieu_huong()">Điều hướng sang trang khác</button>
+
 <script>
-   // k laf số ngưỡng sinh viên;
-   //a là thời gian đến của n sinh viên
-   function angryProfessor(k, a) {
-        let count = 0;
-    for (let i = 0;i < a.length;i++){
-        if (a[i] <= 0) {
-            count++;
-        }
+    function dieu_huong(){
+        location.replace("http://webcoban.vn");
     }
-    if (count >= k) {
-        console.log('NO')
-    }
-    else {
-        console.log('YES')
-    }
-   }
-    let a = [0,-1,2,1]
-    angryProfessor(2,a)
 </script>
+
 </body>
 </html>
