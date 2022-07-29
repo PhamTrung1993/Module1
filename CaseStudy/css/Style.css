@@ -46,5 +46,65 @@ body{
     font-size: 50px;
     color: #f144e8;
     background-image: url("https://file.hstatic.net/200000318987/collection/3_99174fe4ca6a47d09b1a2d6f17a76914.jpg");
+
     height: 300px;
+}
+
+.hoverimage img{
+    -webkit-transform:scale(1.0);
+    -moz-transform:scale(0.8);
+    -o-transform:scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    opacity: 1.0;
+    margin: 0 10px 5px 0;
+}
+.hoverimage img:hover{
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    box-shadow:0px 0px 30px gray;
+    -webkit-box-shadow:0px 0px 30px gray;
+    -moz-box-shadow:0px 0px 30px gray;
+    opacity: 1;
+}
+h2 {
+    color: #58257b
+}
+
+ul {
+
+    list-style-type: none;
+
+    padding: 0;
+    overflow: hidden;
+
+
+}
+
+li {
+    float: left;
+    align-items: center;
+    justify-content: center;
+
+}
+
+li a,.DieuHuong {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a,.DieuHuong,option:hover {
+    color: white;
+    background-color: #db7093;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.DieuHuong {
+    border: 2px;
+    border-color: #db7093;
 }

@@ -15,10 +15,13 @@ function addPerfume () {
             let incense_group= document.getElementById("incenseGroup").value;
         let price = document.getElementById("price").value;
     let img = document.getElementById("img").value;
-
-    let perfume = new Perfume(id,name,gender,capacity,trademark,release_year,incense_group,price,img);
-
-    manager.addPerfume(perfume);
+    if (id === " "){
+        return;
+    }
+    else {
+        let perfume = new Perfume(id, name, gender, capacity, trademark, release_year, incense_group, price, img);
+        manager.addPerfume(perfume);
+    }
         manager.showList();
             clear();
 }
@@ -55,6 +58,9 @@ function editPerfum(id){
 }
 function updatePerfume() {
    let id = document.getElementById("idPerfume").value ;
+   if (id === ' ') {
+       return;
+   }
        let name =document.getElementById("perfumeName").value ;
            let gender = document.getElementById("gender").value ;
                let capacity = document.getElementById("capacity").value ;
@@ -69,6 +75,5 @@ function updatePerfume() {
         manager.showList();
             clear();
 }
-
 
 manager.showList()

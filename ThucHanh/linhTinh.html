@@ -4,13 +4,93 @@
     <meta charset="UTF-8">
     <title>Đăng nhập vào trang quản lý</title>
 </head>
-<body>
+<style>
 
-<button type="submit" onclick="dieu_huong()">Điều hướng sang trang khác</button>
+</style>
+<body onload="showHide()">
+<button id='show'>
+    show
+    </button>
+    <button class=''>
+        hide
+        </button>
+<table border="1" class="table1">
+    <tr>
+        <th colspan="2" class="tieude">Chỉnh sửa hàng trong cửa hàng </th>
+    </tr>
+    <tr>
+        <td>Id</td>
+        <td><input type="number" id="idPerfume" style="width: 90%"></td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td><input type="text " id="perfumeName" style="width: 90%"></td>
+    </tr>
+    <tr>
+        <td>Capacity</td>
+        <td>
+            <select id="capacity" style="width: 50%">
+                <option value="10ml">10ml</option>
+                <option value="50ml">50ml</option>
+                <option value="60ml">60ml</option>
+                <option value="100ml">100ml</option>
+                <option value="150ml">150ml</option>
+                <option value="200ml">200ml</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>gender</td>
+        <td>
+            <select id="gender" style="width: 50%">
+                <option value="Male">Male</option>
+                <option value="FeMale">FeMale</option>
+                <option value="Unisex">Unisex</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>TradeMark</td>
+        <td><input type="text" id="tradeMark" style="width: 90%"></td>
+    </tr>
+    <tr>
+        <td>Release Year</td>
+        <td><input type="Text" id="releaseYear" style="width: 90%"></td>
+    </tr>
+    <tr>
+        <td>Incense Group</td>
+        <td><input type="text" id="incenseGroup" style="width: 90%"></td>
+    </tr>
+    <tr>
+        <td>image</td>
+        <td><input type="text" id="img" style="width: 90%"></td>
+    </tr>
+    <tr>
+        <td>price(VND)</td>
+        <td><input type="number" id="price" style="width: 90%"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button id="add" onclick="addPerfume()" style="width: 80px">Add</button>
+            <button id='save' onclick="updatePerfume()" style="width: 60px;background-color: #f37c14">Save</button>
+        </td>
+    </tr>
+</table>
+
 
 <script>
-    function dieu_huong(){
-        location.replace("http://webcoban.vn");
+    function showHide() {
+        const showBtn = document.querySelector('#show')
+        const hideBtn = document.querySelector('#save')
+        const table = document.querySelector('.table1')
+        table.style.display = 'none'
+        showBtn.addEventListener('click', () => {
+            table.style.display = 'block'
+        })
+        hideBtn.addEventListener('click', () => {
+            table.style.display = 'none'
+        })
     }
 </script>
 

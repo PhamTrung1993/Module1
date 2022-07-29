@@ -13,7 +13,7 @@ class perfumeManagement {
             data += '</td>';
 
             data += '<td>';
-            data += '<img width="150px" height="100px" src=' + this.perfume[i].img + '">';;
+            data += '<div class="hoverimage"><img width="150px" height="100px" src=' + this.perfume[i].img + '"></div>';
             data += '</td>';
 
             data += '<td>';
