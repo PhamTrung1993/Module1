@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>trang web quản lý nước hoa</title>
   <link rel="stylesheet" href="css/Style.css">
+  <link rel="stylesheet" href="css/Hide.css">
+
 
 </head>
 <body>
@@ -33,70 +35,82 @@
   <li><a href="">Hàng Đang Đặt Mua</a></li>
 </ul>
 <br>
+<button onclick="showHide()" style="width: 200px ; height: 50px">Add</button>
+<form style="text-align: right">
+  <input id="timKiem" type="text" name="search" placeholder="Search..">
+  <button type="submit" style="background-color: white "><img src="images.png" style="width: 20px; height: 20px"><i class="fa fa-search"></i></button>
+</form>
 
-<table border="1" class="table1">
-  <tr>
-    <th colspan="2" class="tieude">Chỉnh sửa hàng trong cửa hàng </th>
-  </tr>
-  <tr>
-    <td>Id</td>
-    <td><input type="number" id="idPerfume" style="width: 90%"></td>
-  </tr>
-  <tr>
-    <td>Name</td>
-    <td><input type="text " id="perfumeName" style="width: 90%"></td>
-  </tr>
-  <tr>
-    <td>Capacity</td>
-    <td>
-      <select id="capacity" style="width: 50%">
-        <option value="10ml">10ml</option>
-          <option value="50ml">50ml</option>
-            <option value="60ml">60ml</option>
-            <option value="100ml">100ml</option>
-          <option value="150ml">150ml</option>
-        <option value="200ml">200ml</option>
-    </select>
-    </td>
-  </tr>
-  <tr>
-    <td>gender</td>
-    <td>
-      <select id="gender" style="width: 50%">
-        <option value="Male">Male</option>
-          <option value="FeMale">FeMale</option>
-            <option value="Unisex">Unisex</option>
-    </select>
-  </td>
-  </tr>
-  <tr>
-    <td>TradeMark</td>
-    <td><input type="text" id="tradeMark" style="width: 90%"></td>
-  </tr>
-  <tr>
-    <td>Release Year</td>
-    <td><input type="Text" id="releaseYear" style="width: 90%"></td>
-  </tr>
-  <tr>
-    <td>Incense Group</td>
-    <td><input type="text" id="incenseGroup" style="width: 90%"></td>
-  </tr>
-  <tr>
-    <td>image</td>
-    <td><input type="text" id="img" style="width: 90%"></td>
-  </tr>
-  <tr>
-    <td>price(VND)</td>
-    <td><input type="number" id="price" style="width: 90%"></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>
-      <button id="add" onclick="addPerfume()" style="width: 80px">Add</button>
-      <button id="save" onclick="updatePerfume()" style="width: 60px;background-color: #f37c14">Save</button>
-    </td>
-  </tr>
-</table>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+      <table border="1" class="table1">
+        <tr>
+          <th colspan="2" class="tieude">Chỉnh sửa hàng trong cửa hàng </th>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td><input type="number" id="idPerfume" style="width: 90%"></td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td><input type="text " id="perfumeName" style="width: 90%"></td>
+        </tr>
+        <tr>
+          <td>Capacity</td>
+          <td>
+            <select id="capacity" style="width: 50%">
+              <option value="10ml">10ml</option>
+                <option value="50ml">50ml</option>
+                  <option value="60ml">60ml</option>
+                  <option value="100ml">100ml</option>
+                <option value="150ml">150ml</option>
+              <option value="200ml">200ml</option>
+          </select>
+          </td>
+        </tr>
+        <tr>
+          <td>gender</td>
+          <td>
+            <select id="gender" style="width: 50%">
+              <option value="Male">Male</option>
+                <option value="FeMale">FeMale</option>
+                  <option value="Unisex">Unisex</option>
+          </select>
+        </td>
+        </tr>
+        <tr>
+          <td>TradeMark</td>
+          <td><input type="text" id="tradeMark" style="width: 90%"></td>
+        </tr>
+        <tr>
+          <td>Release Year</td>
+          <td><input type="Text" id="releaseYear" style="width: 90%"></td>
+        </tr>
+        <tr>
+          <td>Incense Group</td>
+          <td><input type="text" id="incenseGroup" style="width: 90%"></td>
+        </tr>
+        <tr>
+          <td>image</td>
+          <td><input type="text" id="img" style="width: 90%"></td>
+        </tr>
+        <tr>
+          <td>price(VND)</td>
+          <td><input type="number" id="price" style="width: 90%"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button id="add" onclick="addPerfume()" style="width: 80px">Add</button>
+            <button id="save" onclick="updatePerfume()" style="width: 60px;background-color: #f37c14">Save</button>
+          </td>
+        </tr>
+      </table>
+  </div>
+
+</div>
+
 <br><br><br>
 <table style="width: 100%; ">
   <tr>
@@ -122,5 +136,6 @@
 </body>
 <script src="Js/perfume.js"></script>
   <script src="Js/perfumeManagement.js"></script>
+    <script src="Js/Hide.js"></script>
       <script src="Js/main.js"></script>
 </html>

@@ -5,94 +5,151 @@
     <title>Đăng nhập vào trang quản lý</title>
 </head>
 <style>
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
 
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
 </style>
-<body onload="showHide()">
-<button id='show'>
-    show
-    </button>
-    <button class=''>
-        hide
-        </button>
-<table border="1" class="table1">
-    <tr>
-        <th colspan="2" class="tieude">Chỉnh sửa hàng trong cửa hàng </th>
-    </tr>
-    <tr>
-        <td>Id</td>
-        <td><input type="number" id="idPerfume" style="width: 90%"></td>
-    </tr>
-    <tr>
-        <td>Name</td>
-        <td><input type="text " id="perfumeName" style="width: 90%"></td>
-    </tr>
-    <tr>
-        <td>Capacity</td>
-        <td>
-            <select id="capacity" style="width: 50%">
-                <option value="10ml">10ml</option>
-                <option value="50ml">50ml</option>
-                <option value="60ml">60ml</option>
-                <option value="100ml">100ml</option>
-                <option value="150ml">150ml</option>
-                <option value="200ml">200ml</option>
-            </select>
-        </td>
-    </tr>
-    <tr>
-        <td>gender</td>
-        <td>
-            <select id="gender" style="width: 50%">
-                <option value="Male">Male</option>
-                <option value="FeMale">FeMale</option>
-                <option value="Unisex">Unisex</option>
-            </select>
-        </td>
-    </tr>
-    <tr>
-        <td>TradeMark</td>
-        <td><input type="text" id="tradeMark" style="width: 90%"></td>
-    </tr>
-    <tr>
-        <td>Release Year</td>
-        <td><input type="Text" id="releaseYear" style="width: 90%"></td>
-    </tr>
-    <tr>
-        <td>Incense Group</td>
-        <td><input type="text" id="incenseGroup" style="width: 90%"></td>
-    </tr>
-    <tr>
-        <td>image</td>
-        <td><input type="text" id="img" style="width: 90%"></td>
-    </tr>
-    <tr>
-        <td>price(VND)</td>
-        <td><input type="number" id="price" style="width: 90%"></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>
-            <button id="add" onclick="addPerfume()" style="width: 80px">Add</button>
-            <button id='save' onclick="updatePerfume()" style="width: 60px;background-color: #f37c14">Save</button>
-        </td>
-    </tr>
-</table>
+<body>
+<!-- Trigger/Open The Modal -->
+<button class="myBtn" onclick="showModal()">Open Modal</button>
+<button class="myBtn " onclick="showModal()">Edit</button>
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <table border="1" class="table1" style="width: 50%; height: 100% ; margin-right: auto;margin-left: auto">
+            <tr>
+                <th colspan="2" class="tieude">Chỉnh sửa hàng trong cửa hàng </th>
+            </tr>
+            <tr>
+                <td>Id</td>
+                <td><input type="number" id="idPerfume" style="width: 90%"></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text " id="perfumeName" style="width: 90%"></td>
+            </tr>
+            <tr>
+                <td>Capacity</td>
+                <td>
+                    <select id="capacity" style="width: 50%">
+                        <option value="10ml">10ml</option>
+                        <option value="50ml">50ml</option>
+                        <option value="60ml">60ml</option>
+                        <option value="100ml">100ml</option>
+                        <option value="150ml">150ml</option>
+                        <option value="200ml">200ml</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>gender</td>
+                <td>
+                    <select id="gender" style="width: 50%">
+                        <option value="Male">Male</option>
+                        <option value="FeMale">FeMale</option>
+                        <option value="Unisex">Unisex</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>TradeMark</td>
+                <td><input type="text" id="tradeMark" style="width: 90%"></td>
+            </tr>
+            <tr>
+                <td>Release Year</td>
+                <td><input type="Text" id="releaseYear" style="width: 90%"></td>
+            </tr>
+            <tr>
+                <td>Incense Group</td>
+                <td><input type="text" id="incenseGroup" style="width: 90%"></td>
+            </tr>
+            <tr>
+                <td>image</td>
+                <td><input type="text" id="img" style="width: 90%"></td>
+            </tr>
+            <tr>
+                <td>price(VND)</td>
+                <td><input type="number" id="price" style="width: 90%"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button id="add" onclick="addPerfume()" style="width: 80px">Add</button>
+                    <button id="save" onclick="updatePerfume()" style="width: 60px;background-color: #f37c14">Save</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
 <script>
-    function showHide() {
-        const showBtn = document.querySelector('#show')
-        const hideBtn = document.querySelector('#save')
-        const table = document.querySelector('.table1')
-        table.style.display = 'none'
-        showBtn.addEventListener('click', () => {
-            table.style.display = 'block'
-        })
-        hideBtn.addEventListener('click', () => {
-            table.style.display = 'none'
-        })
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+
+
+    function showModal() {
+        console.log("abc");
+        modal.style.display = "block";
+
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     }
 </script>
-
 </body>
 </html>

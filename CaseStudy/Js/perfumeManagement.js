@@ -44,7 +44,7 @@ class perfumeManagement {
             data += this.perfume[i].price;
             data += '</td>';
 
-            data += '<td><button onclick="editPerfum('+ i +')">Edit</button></td>'
+            data += '<td><button onclick="editPerfum('+ i +'); showHide()">Edit</button></td>'
             data += '<td><button onclick="deletePerfum('+ i +')" style="background-color: red">Delete</button></td>'
 
             data += "</tr>"
