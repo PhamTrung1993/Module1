@@ -35,12 +35,11 @@
   <li><a href="">Hàng Đang Đặt Mua</a></li>
 </ul>
 <br>
-<button onclick="showHide()" style="width: 200px ; height: 50px">Add</button>
-<form style="text-align: right">
-  <input id="timKiem" type="text" name="search" placeholder="Search..">
-  <button type="submit" style="background-color: white "><img src="images.png" style="width: 20px; height: 20px"><i class="fa fa-search"></i></button>
-</form>
 
+  <input id="Search" type="text" name="search" placeholder="Search..">
+  <button type="submit" style="background-color: blue; color: white; width: 100px; height: 40px " onclick="Search()">Search</button>
+
+<button onclick="showHide()" style="width: 200px ; height: 50px; position: absolute; right: 20px">Add</button>
 <div id="myModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -104,6 +103,7 @@
           <td>
             <button id="add" onclick="addPerfume()" style="width: 80px">Add</button>
             <button id="save" onclick="updatePerfume()" style="width: 60px;background-color: #f37c14">Save</button>
+
           </td>
         </tr>
       </table>

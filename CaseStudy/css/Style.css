@@ -108,7 +108,7 @@ li a,.DieuHuong,option:hover {
     border: 2px;
     border-color: #db7093;
 }
-#timKiem[type="text"] {
+#Search[type="text"] {
     width: 150px;
 
 
@@ -117,7 +117,7 @@ li a,.DieuHuong,option:hover {
     padding: 10px 8px;
     transition:0.6s ease-in-out;
 }
-#timKiem[type="text"]:focus{
+#Search[type="text"]:focus{
     width:500px;
     background-color:lightpink;
 }

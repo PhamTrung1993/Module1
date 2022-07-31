@@ -73,5 +73,21 @@ function updatePerfume() {
         manager.showList();
             clear();
 }
+function Search(){
+    let idSearch = document.getElementById("Search").value;
+    let out = "";
+    for (let i = 0; i < manager.perfume.length; i++) {
 
+        if (idSearch === manager.perfume[i].id) {
+           out = " Perfume Name is: " + manager.perfume[i].name + " " + manager.perfume[i].capacity
+            break;
+        }
+        else {
+            out = "không có"
+        }
+    }
+    alert(out);
+
+
+}
 manager.showList()
